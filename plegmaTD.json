@@ -1,0 +1,60 @@
+{
+  "@context": "https://www.w3.org/2022/wot/td/v1.1",
+  "@type": "Thing",
+  "security": [
+    "nosec_sc"
+  ],
+  "properties": {
+    "device": {
+      "type": "object",
+      "readOnly": true,
+      "uriVariables": {
+        "deviceID": {
+          "type": "integer"
+        },
+        "field": {
+          "type": "string"
+        },
+        "function": {
+          "type": "string"
+        },
+        "startTime": {
+          "type": "string"
+        },
+        "endTime": {
+          "type": "string"
+        }
+      },
+      "forms": [
+        {
+          "href": "http://10.0.2.15:8080/building01/properties/device{?deviceID,field,function,startTime,endTime}",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ],
+      "writeOnly": false,
+      "observable": false
+    }
+  },
+  "title": "Building01",
+  "description": "Plegma's building 01",
+  "id": "urn:uuid:727dddd4-a207-401d-9e3e-93e60d0a6bd3",
+  "forms": [
+    {
+      "href": "http://10.0.2.15:8080/building01/properties",
+      "contentType": "application/json",
+      "op": [
+        "readallproperties",
+        "readmultipleproperties"
+      ]
+    }
+  ],
+  "securityDefinitions": {
+    "nosec_sc": {
+      "scheme": "nosec"
+    }
+  }
+}
