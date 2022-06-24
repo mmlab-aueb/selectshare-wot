@@ -13,7 +13,7 @@ Our implementation is currently used by the [SelectShare](https://mm.aueb.gr/pro
 All systems require to have:
 - [NodeJS](https://nodejs.org/) version 12+
 - [npm](https://npmjs.com) version 7+
-- 
+
 To run the gateway, you need to install the node-wot library as a Node.js dependency. To install the library, you can use npm to install the node-wot packages required. 
 
 To do so, `cd` inside the working directory and run:
