@@ -6,7 +6,7 @@
 ## About
 This is a Web of Things (WoT) gateway implementation that uses the W3C WoT implementation, [Eclipse Thingweb node-wot](https://www.thingweb.io), which is an official reference implementation of the WoT Interaction Model.
 
-Our implementation can be used for interacting with Things provided by Plegma Labs and domX.
+Currently, our implementation includes two Thing Descriptions (TDs) that are used for interacting with Things provided by Plegma Labs and domX through transcoders. However, anyone can include the TD that corresponds to her Things, in order to interact with them.
 Our implementation is currently used by the [SelectShare](https://mm.aueb.gr/projects/selectshare) project.
 
 ## Prerequisites
