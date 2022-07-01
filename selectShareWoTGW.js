@@ -81,11 +81,11 @@ servient.start().then((WoT) => {
                 uriVariables: {
                     deviceID: {type: "string"},
                     metric: {type: "string"},
-                    timeFrom: {type: "string"},
-                    timeTo: {type: "string"}
+                    startTime: {type: "string"},
+                    endTime: {type: "string"}
                 },
                 forms: [{
-                    "href": "http://localhost:8080/domx/properties/device{?deviceID,metric,timeFrom,timeTo}",
+                    "href": "http://localhost:8080/domx/properties/device{?deviceID,metric,startTime,endTime}",
                     "htv:methodName": 'GET'
                 }]
             }
@@ -97,15 +97,15 @@ servient.start().then((WoT) => {
             const uriVariables = options.uriVariables;
             const deviceID = uriVariables.deviceID;
             //const metric = uriVariables.metric;
-            const timeFrom = uriVariables.timeFrom;
-            const timeTo = uriVariables.timeTo;
+            const startTime = uriVariables.startTime;
+            const endTime = uriVariables.endTime;
 
             var options = {
                 'method': 'GET',
-                'url': 'http://localhost:9099/?deviceID='+deviceID+"&timeFrom="+timeFrom+"&timeTo="+timeTo
+                'url': 'http://localhost:9099/?deviceID='+deviceID+"&startTime="+startTime+"&endTime="+endTime
               };
 
-            url = 'http://localhost:9099/?deviceID='+deviceID+"&timeFrom="+timeFrom+"&timeTo="+timeTo;
+            url = 'http://localhost:9099/?deviceID='+deviceID+"&startTime="+startTime+"&endTime="+endTime;
 
             return await send_req();
             
